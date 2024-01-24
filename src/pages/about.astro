@@ -22,6 +22,9 @@ const profile: Profile = {
 };
 
 const skills: Skills = ['HTML', 'CSS', 'Javascript', 'Astro', 'Svelte', 'SQL'];
+
+const skillColor = 'navy';
+const rgbColor = 'rgba(250, 20, 128, 0.8)';
 ---
 
 <Layout title={pageTitle}>
@@ -48,18 +51,21 @@ const skills: Skills = ['HTML', 'CSS', 'Javascript', 'Astro', 'Svelte', 'SQL'];
 			<div class="mt-12">
 				<p class="mb-2">My Skills are:</p>
 				<ul>
-					{skills.map((skill) => <li>{skill}</li>)}
+					{skills.map((skill) => <li class="skill">{skill}</li>)}
 				</ul>
 			</div>
 		</div>
 	</main>
 </Layout>
 
-<style>
+<style define:vars={{ skillColor, rgbColor }}>
 	h1 {
 		@apply text-[6rem] text-purple-400;
 	}
 	ul {
 		@apply inline-block list-inside list-disc;
+	}
+	.skill {
+		@apply font-bold text-[var(--rgbColor)];
 	}
 </style>
