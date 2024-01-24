@@ -1,11 +1,60 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+
+type Profile = {
+	firstName: string;
+	lastName: string;
+	country: string;
+	occupation: string;
+	hobbies: string[];
+};
+
+type Skills = string[];
+
+const pageTitle = 'About Me';
+
+const profile: Profile = {
+	firstName: 'Hazy',
+	lastName: 'Fantayzee',
+	country: 'Australia',
+	occupation: 'DJ',
+	hobbies: ['photography', 'music', 'coding'],
+};
+
+const skills: Skills = ['HTML', 'CSS', 'Javascript', 'Astro', 'Svelte', 'SQL'];
 ---
 
-<Layout title="Blog Tutorial">
+<Layout title={pageTitle}>
 	<main class="w-full justify-center space-y-5 pt-10 text-center text-cyan-50">
-		<h1 class="text-cyan-50">About Page</h1>
-		<p>This site is a code along for the official Astro docs</p>
-		<p>This site will update as complete more of the tutorial</p>
+		<h1 class="text-cyan-50">{pageTitle}</h1>
+		<div class="px-5">
+			<p>
+				This site is a code along for the official Astro docs by me, {profile.firstName}
+				{profile.lastName}.
+			</p>
+			<br />
+			<p class="mb-2 mt-10">Here are some facts about me:</p>
+			<ul class="inline-block list-inside list-disc">
+				<li>I come from {profile.country}</li>
+				<li>I currently work as {profile.occupation}</li>
+				{
+					profile.hobbies.length >= 2 && (
+						<li>
+							My hobbies are: {profile.hobbies[0]} & {profile.hobbies[1]}
+						</li>
+					)
+				}
+			</ul>
+			<div class="mt-12">
+				<p class="mb-2">My Skills are:</p>
+				<ul class="inline-block list-inside list-disc">
+					{skills.map((skill) => <li>{skill}</li>)}
+				</ul>
+			</div>
+		</div>
+		<!-- <button onclick={console.log('clicked')} class="rounded bg-white px-4 py-2 text-stone-800"
+			>CLICK ME</button -->
 	</main>
 </Layout>
+
+<script></script>
