@@ -27,7 +27,7 @@ const happy = true;
 const finished = false;
 const goal = 3;
 
-const skillColor = 'navy';
+const skillColor = 'cyan';
 const rgbColor = 'rgba(250, 20, 128, 0.8)';
 ---
 
@@ -77,7 +77,7 @@ const rgbColor = 'rgba(250, 20, 128, 0.8)';
 
 <style define:vars={{ skillColor, rgbColor }}>
 	h1 {
-		@apply text-[6rem] text-purple-400;
+		@apply text-[6rem] text-[var(--skillColor)];
 	}
 	ul {
 		@apply inline-block list-inside list-disc;
