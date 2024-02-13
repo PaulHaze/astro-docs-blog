@@ -23,6 +23,10 @@ const profile: Profile = {
 
 const skills: Skills = ['HTML', 'CSS', 'Javascript', 'Astro', 'Svelte', 'SQL'];
 
+const happy = true;
+const finished = false;
+const goal = 3;
+
 const skillColor = 'navy';
 const rgbColor = 'rgba(250, 20, 128, 0.8)';
 ---
@@ -32,7 +36,8 @@ const rgbColor = 'rgba(250, 20, 128, 0.8)';
 		<h1 class="text-cyan-50">{pageTitle}</h1>
 		<div class="px-5">
 			<p>
-				This site is a code along for the official Astro docs by me, {profile.firstName}
+				This site is a code along for the official Astro docs by me,
+				{profile.firstName}
 				{profile.lastName}.
 			</p>
 			<br />
@@ -54,6 +59,18 @@ const rgbColor = 'rgba(250, 20, 128, 0.8)';
 					{skills.map((skill) => <li class="skill">{skill}</li>)}
 				</ul>
 			</div>
+			<div class="mt-5 gap-y-4 text-xl">
+				<h5>Conditional Rendering</h5>
+				{happy && <p>I'm currently happy</p>}
+				{finished && <p>I've finished the tutorial</p>}
+				{
+					goal === 3 ? (
+						<p>My goal is to finish in 3 days</p>
+					) : (
+						<p>My goal is not to finish</p>
+					)
+				}
+			</div>
 		</div>
 	</main>
 </Layout>
@@ -64,6 +81,9 @@ const rgbColor = 'rgba(250, 20, 128, 0.8)';
 	}
 	ul {
 		@apply inline-block list-inside list-disc;
+	}
+	p {
+		@apply text-sm text-white/50;
 	}
 	.skill {
 		@apply font-bold text-[var(--rgbColor)];
