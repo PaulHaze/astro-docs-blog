@@ -1,7 +1,33 @@
 ---
+// import { Image } from 'astro:assets';
+import facebookLogo from '@/images/facebook.svg';
+import githubLogo from '@/images/github.svg';
+import twitterLogo from '@/images/twitter.svg';
+
+interface Props {
+	platform: string;
+	username: string;
+}
+
+interface Logos {
+	facebook: string;
+	github: string;
+	twitter: string;
+}
+
 const { platform, username } = Astro.props;
+const socialLogo: Logos = {
+	facebook: facebookLogo.src,
+	github: githubLogo.src,
+	twitter: twitterLogo.src,
+};
 ---
 
-<a class="text-white/80" href={`https://www.${platform}.com/${username}`}
-	>{platform}</a
+<a class="text-white/80" href={`https://www.${platform}.com/${username}`}>
+	<img
+		src={socialLogo[platform as keyof Logos]}
+		alt={`${platform} link`}
+		width="40"
+		height="40"
+	/></a
 >
