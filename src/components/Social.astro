@@ -1,5 +1,4 @@
 ---
-// import { Image } from 'astro:assets';
 import facebookLogo from '@/images/facebook.svg?raw';
 import githubLogo from '@/images/github.svg?raw';
 import twitterLogo from '@/images/twitter.svg?raw';
@@ -24,14 +23,8 @@ const socialLogo: Logos = {
 ---
 
 <a
-	class="relative h-[30px] w-[30px] fill-white/50"
+	class="fill-stone-400 transition-all hover:fill-stone-300"
 	href={`https://www.${platform}.com/${username}`}
 >
 	<Fragment set:html={socialLogo[platform as keyof Logos]} />
 </a>
-
-<style>
-	.imag {
-		object-fit: contain;
-	}
-</style>
