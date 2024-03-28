@@ -1,30 +1,33 @@
 ---
-import facebookLogo from '@/images/facebook.svg?raw';
-import githubLogo from '@/images/github.svg?raw';
-import twitterLogo from '@/images/twitter.svg?raw';
+import { Icon } from 'astro-icon/components';
+
+// import facebookLogo from '@/images/facebook.svg?raw';
+// import githubLogo from '@/images/github.svg?raw';
+// import twitterLogo from '@/images/twitter.svg?raw';
 
 interface Props {
 	platform: string;
 	username: string;
 }
 
-interface Logos {
-	facebook: string;
-	github: string;
-	twitter: string;
-}
+// interface Logos {
+// 	facebook: string;
+// 	github: string;
+// 	twitter: string;
+// }
 
 const { platform, username } = Astro.props;
-const socialLogo: Logos = {
-	facebook: facebookLogo,
-	github: githubLogo,
-	twitter: twitterLogo,
-};
+// const socialLogo: Logos = {
+// 	facebook: facebookLogo,
+// 	github: githubLogo,
+// 	twitter: twitterLogo,
+// };
 ---
 
-<a
-	class="fill-stone-400 transition-all hover:fill-stone-300"
-	href={`https://www.${platform}.com/${username}`}
->
-	<Fragment set:html={socialLogo[platform as keyof Logos]} />
+<a class="h-[30px] w-[30px]" href={`https://www.${platform}.com/${username}`}>
+	<Icon
+		class="h-full w-full text-stone-400 transition-all hover:text-stone-300"
+		name={platform}
+	/>
+	<!-- <Fragment set:html={socialLogo[platform as keyof Logos]} /> -->
 </a>
