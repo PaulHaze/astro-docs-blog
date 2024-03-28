@@ -18,14 +18,14 @@ interface Props {
 
 const { platform, username } = Astro.props;
 // const socialLogo: Logos = {
-// 	facebook: facebookLogo,
-// 	github: githubLogo,
-// 	twitter: twitterLogo,
+// 	facebook: 'openmoji:facebook',
+// 	github: 'openmoji:github',
+// 	twitter: 'openmoji:twitter',
 // };
 ---
 
 <a class="" href={`https://www.${platform}.com/${username}`}>
-	<Icon size={30} name={platform} />
+	<Icon size={35} name={`openmoji:${platform}`} />
 	<!-- <Fragment set:html={socialLogo[platform as keyof Logos]} /> -->
 </a>
 
