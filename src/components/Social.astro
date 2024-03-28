@@ -24,20 +24,7 @@ const { platform, username } = Astro.props;
 // };
 ---
 
-<a class="" href={`https://www.${platform}.com/${username}`}>
+<a class="cursor-pointer" href={`https://www.${platform}.com/${username}`}>
 	<Icon size={35} name={`openmoji:${platform}`} />
 	<!-- <Fragment set:html={socialLogo[platform as keyof Logos]} /> -->
 </a>
-
-<style>
-	[data-icon] {
-		@apply text-stone-400 transition-all hover:text-stone-300;
-		font-size: 2rem;
-	}
-	[data-icon='facebook'] {
-		@apply text-blue-500 transition-all hover:text-blue-600;
-	}
-	[data-icon='twitter'] {
-		@apply text-black/80 transition-all hover:text-black;
-	}
-</style>
