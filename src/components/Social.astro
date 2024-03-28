@@ -1,8 +1,8 @@
 ---
 // import { Image } from 'astro:assets';
-import facebookLogo from '@/images/facebook.svg';
-import githubLogo from '@/images/github.svg';
-import twitterLogo from '@/images/twitter.svg';
+import facebookLogo from '@/images/facebook.svg?raw';
+import githubLogo from '@/images/github.svg?raw';
+import twitterLogo from '@/images/twitter.svg?raw';
 
 interface Props {
 	platform: string;
@@ -17,17 +17,21 @@ interface Logos {
 
 const { platform, username } = Astro.props;
 const socialLogo: Logos = {
-	facebook: facebookLogo.src,
-	github: githubLogo.src,
-	twitter: twitterLogo.src,
+	facebook: facebookLogo,
+	github: githubLogo,
+	twitter: twitterLogo,
 };
 ---
 
-<a class="text-white/80" href={`https://www.${platform}.com/${username}`}>
-	<img
-		src={socialLogo[platform as keyof Logos]}
-		alt={`${platform} link`}
-		width="40"
-		height="40"
-	/></a
+<a
+	class="relative h-[30px] w-[30px] fill-white/50"
+	href={`https://www.${platform}.com/${username}`}
 >
+	<Fragment set:html={socialLogo[platform as keyof Logos]} />
+</a>
+
+<style>
+	.imag {
+		object-fit: contain;
+	}
+</style>
