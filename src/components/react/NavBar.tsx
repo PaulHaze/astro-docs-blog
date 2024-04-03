@@ -26,7 +26,6 @@ export function NavBar() {
 					</ul>
 					<div className="sm:hidden">
 						<Hamburger isOpen={isOpen} setOpen={setOpen} />
-						{/* <HamburgerMine /> */}
 					</div>
 				</div>
 			</nav>
