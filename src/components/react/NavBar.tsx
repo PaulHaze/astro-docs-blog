@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { Hamburger } from './Hamburger';
+import { HamburgerLinks } from './HamburgerLinks';
 import { NavLogo } from './Logo';
 
 export function NavBar() {
@@ -29,7 +30,7 @@ export function NavBar() {
 					</div>
 				</div>
 			</nav>
-			<div className="">HAMBURGER LINKS</div>
+			<HamburgerLinks />
 		</div>
 	);
 }
