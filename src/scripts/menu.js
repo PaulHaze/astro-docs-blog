@@ -1,3 +1,3 @@
 document.querySelector('.hamburger').addEventListener('click', () => {
-	document.querySelector('.hamburger-links').classList.toggle('.show');
+	document.querySelector('.hamburger-links').classList.toggle('hide');
 });
