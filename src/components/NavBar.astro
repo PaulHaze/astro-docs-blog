@@ -1,5 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+import HamburgerTheirs from './hamburger/HamburgerTheirs.astro';
+import NavLinks from './NavLinks.astro';
+import HamburgerLinks from './hamburger/HamburgerLinks.astro';
 ---
 
 <nav class="bg-stone-700/30 py-4">
@@ -7,26 +11,10 @@ import { Icon } from 'astro-icon/components';
 		class="mx-auto flex w-full max-w-lg items-center justify-between px-10 md:px-20"
 	>
 		<Icon name="header-logo" size={30} />
-		<ul class="">
-			<li class="">
-				<a href="/">HOME</a>
-			</li>
-			<li class="">
-				<a href="/blog/">BLOG</a>
-			</li>
-			<li class="">
-				<a href="/about/">ABOUT</a>
-			</li>
-		</ul>
+		<div class="sm:hidden">
+			<HamburgerTheirs />
+		</div>
+		<NavLinks />
 	</div>
+	<HamburgerLinks />
 </nav>
-
-<style>
-	ul {
-		@apply flex gap-x-5 text-sm text-stone-400;
-	}
-
-	ul li {
-		@apply hover:text-stone-100;
-	}
-</style>

@@ -1,0 +1,31 @@
+<ul class="hamburger-links show">
+	<li class="">
+		<a href="/">HOME</a>
+	</li>
+	<li class="">
+		<a href="/blog/">BLOG</a>
+	</li>
+	<li class="">
+		<a href="/about/">ABOUT</a>
+	</li>
+</ul>
+
+<style>
+	.hamburger-links {
+		@apply mt-2 w-full text-stone-400 sm:hidden;
+	}
+	.show {
+		@apply visible;
+	}
+	.hide {
+		@apply hidden;
+	}
+
+	ul {
+		@apply flex flex-col items-center justify-center gap-y-2 text-sm text-stone-400 sm:flex;
+	}
+
+	ul li {
+		@apply hover:text-stone-100;
+	}
+</style>
