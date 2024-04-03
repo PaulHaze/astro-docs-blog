@@ -6,11 +6,26 @@
 
 <style>
 	.hamburger {
-		@apply flex cursor-pointer flex-col gap-y-[8px]  p-2;
+		@apply flex cursor-pointer flex-col gap-y-[8px] p-2 transition-all;
+	}
+
+	.active {
+		@apply gap-y-0 transition-all;
 	}
 
 	.hamburger .line {
 		@apply block h-[1px]
-		w-5 bg-stone-500;
+		w-5 bg-stone-500 transition-all;
+	}
+	.active .line {
+		&:nth-child(1) {
+			transform: rotate(45deg);
+		}
+		&:nth-child(2) {
+			@apply hidden;
+		}
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+		}
 	}
 </style>
