@@ -1,11 +1,13 @@
 import { useState } from 'react';
+import { useCollapse } from 'react-collapsed';
 
 import { Hamburger } from './Hamburger';
 import { HamburgerLinks } from './HamburgerLinks';
 import { NavLogo } from './Logo';
 
 export function NavBar() {
-	const [isOpen, setOpen] = useState(false);
+	const [isExpanded, setExpanded] = useState(false);
+	const { getCollapseProps } = useCollapse({ isExpanded });
 
 	return (
 		<div className="">
@@ -26,11 +28,13 @@ export function NavBar() {
 						</li>
 					</ul>
 					<div className="sm:hidden">
-						<Hamburger isOpen={isOpen} setOpen={setOpen} />
+						<Hamburger isOpen={isExpanded} setOpen={setExpanded} />
 					</div>
 				</div>
 			</nav>
-			<HamburgerLinks />
+			<div {...getCollapseProps()}>
+				<HamburgerLinks />
+			</div>
 		</div>
 	);
 }
