@@ -1,7 +1,8 @@
-<ul class="hamburger-links hide show">
+<ul class="hamburger-links hide show relative">
 	<li class="">
 		<a href="/">HOME</a>
 	</li>
+	<!-- <hr class="w-40 text-green-700" /> -->
 	<li class="">
 		<a href="/blog/">BLOG</a>
 	</li>
@@ -15,17 +16,22 @@
 		@apply mt-2 w-full text-stone-400;
 	}
 	.show {
-		@apply visible;
+		@apply visible sm:hidden;
 	}
 	.hide {
 		@apply hidden;
 	}
 
 	ul {
-		@apply flex flex-col items-center justify-center gap-y-2 text-sm text-stone-400 sm:flex;
+		@apply flex flex-col items-center justify-center text-sm text-stone-400 sm:flex;
 	}
 
 	ul li {
-		@apply hover:text-stone-100;
+		@apply flex w-[50%] py-3 text-center flex-center hover:text-stone-100;
+		&:not(:last-child) {
+			@apply border-b border-stone-400/50;
+		}
+	}
+	hr {
 	}
 </style>
