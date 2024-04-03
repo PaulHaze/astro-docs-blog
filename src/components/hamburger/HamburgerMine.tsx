@@ -8,13 +8,13 @@ export function HamburgerMine() {
 	return (
 		<div className="relative">
 			<Hamburger
-				onToggle={(toggled) => {
-					if (toggled) {
-						console.log('open menu');
-					} else {
-						console.log('close menu');
-					}
-				}}
+				// onToggle={(toggled) => {
+				// 	if (toggled) {
+				// 		console.log('open menu');
+				// 	} else {
+				// 		console.log('close menu');
+				// 	}
+				// }}
 				color="rgba(255,255,255,0.4)"
 				size={28}
 				toggled={isOpen}
