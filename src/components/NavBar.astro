@@ -1,7 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components';
-
-// import HamburgerTheirs from './hamburger/HamburgerTheirs.astro';
 import NavLinks from './NavLinks.astro';
 import HamburgerLinks from './hamburger/HamburgerLinks.astro';
 import { HamburgerMine } from './hamburger/HamburgerMine';
@@ -14,7 +12,6 @@ import { HamburgerMine } from './hamburger/HamburgerMine';
 		<Icon name="header-logo" size={30} />
 		<div class="sm:hidden">
 			<HamburgerMine client:load />
-			<!-- <HamburgerTheirs /> -->
 		</div>
 		<NavLinks />
 	</div>
