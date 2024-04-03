@@ -1,18 +1,20 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-import HamburgerTheirs from './hamburger/HamburgerTheirs.astro';
+// import HamburgerTheirs from './hamburger/HamburgerTheirs.astro';
 import NavLinks from './NavLinks.astro';
 import HamburgerLinks from './hamburger/HamburgerLinks.astro';
+import { HamburgerMine } from './hamburger/HamburgerMine';
 ---
 
-<nav class="bg-stone-700/30 py-4">
+<nav class="flex h-[60px] items-center bg-stone-700/30">
 	<div
 		class="mx-auto flex w-full max-w-lg items-center justify-between px-10 md:px-20"
 	>
 		<Icon name="header-logo" size={30} />
 		<div class="sm:hidden">
-			<HamburgerTheirs />
+			<HamburgerMine client:load />
+			<!-- <HamburgerTheirs /> -->
 		</div>
 		<NavLinks />
 	</div>
