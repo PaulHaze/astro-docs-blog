@@ -49,6 +49,15 @@ export default {
 				},
 				textMain: 'rgb(var(--tw-text-100) / <alpha-value>)',
 				textMuted: 'rgb(var(--tw-text-200) / <alpha-value>)',
+				primary: {
+					100: 'rgb(var(--tw-primary-100) / <alpha-value>)',
+					200: 'rgb(var(--tw-primary-200) / <alpha-value>)',
+					300: 'rgb(var(--tw-primary-300) / <alpha-value>)',
+				},
+				accent: {
+					100: 'rgb(var(--tw-accent-100) / <alpha-value>)',
+					200: 'rgb(var(--tw-accent-200) / <alpha-value>)',
+				},
 			},
 			minWidth: {
 				xs: '431px',
