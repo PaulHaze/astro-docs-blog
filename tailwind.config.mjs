@@ -41,6 +41,15 @@ export default {
 			center: true,
 		},
 		extend: {
+			colors: {
+				mainBg: {
+					100: 'rgb(var(--tw-bg-100) / <alpha-value>)',
+					200: 'rgb(var(--tw-bg-200) / <alpha-value>)',
+					300: 'rgb(var(--tw-bg-300) / <alpha-value>)',
+				},
+				textMain: 'rgb(var(--tw-text-100) / <alpha-value>)',
+				textMuted: 'rgb(var(--tw-text-200) / <alpha-value>)',
+			},
 			minWidth: {
 				xs: '431px',
 				sm: '640px',

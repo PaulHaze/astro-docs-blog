@@ -2,22 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--primary-100: #d4eaf7;
+	--primary-200: #b6ccd8;
+	--primary-300: #3b3c3d;
+	--accent-100: #71c4ef;
+	--accent-200: #00668c;
+	--text-100: #1d1c1c;
+	--text-200: #313d44;
+	--bg-100: #fffefb;
+	--bg-200: #f5f4f1;
+	--bg-300: #cccbc8;
+}
+:root.dark {
+	--primary-100: #1f3a5f;
+	--primary-200: #4d648d;
+	--primary-300: #acc2ef;
+	--accent-100: #3d5a80;
+	--accent-200: #cee8ff;
+	--text-100: #ffffff;
+	--text-200: #e0e0e0;
+	--bg-100: #0f1c2e;
+	--bg-200: #1f2b3e;
+	--bg-300: #374357;
+}
+
+[data-theme='dark'] {
+	--primary-100: #1f3a5f;
+	--primary-200: #4d648d;
+	--primary-300: #acc2ef;
+	--accent-100: #3d5a80;
+	--accent-200: #cee8ff;
+	--text-100: #ffffff;
+	--text-200: #e0e0e0;
+	--bg-100: #0f1c2e;
+	--bg-200: #1f2b3e;
+	--bg-300: #374357;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-100: #1f3a5f;
+		--primary-200: #4d648d;
+		--primary-300: #acc2ef;
+		--accent-100: #3d5a80;
+		--accent-200: #cee8ff;
+		--text-100: #ffffff;
+		--text-200: #e0e0e0;
+		--bg-100: #0f1c2e;
+		--bg-200: #1f2b3e;
+		--bg-300: #374357;
+	}
+}
+
 @layer base {
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--tw-primary-100: 212 234 247;
+		--tw-primary-200: 182 204 216;
+		--tw-primary-300: 59 60 61;
+		--tw-accent-100: 113 196 239;
+		--tw-accent-200: 0 102 140;
+		--tw-text-100: 29 28 28;
+		--tw-text-200: 49 61 68;
+		--tw-bg-100: 255 254 251;
+		--tw-bg-200: 245 244 241;
+		--tw-bg-300: 204 203 200;
+	}
+	[data-theme='dark'] {
+		--tw-primary-100: 31 58 95;
+		--tw-primary-200: 77 100 141;
+		--tw-primary-300: 172 194 239;
+		--tw-accent-100: 61 90 128;
+		--tw-accent-200: 206 232 255;
+		--tw-text-100: 255 255 255;
+		--tw-text-200: 224 224 224;
+		--tw-bg-100: 15 28 46;
+		--tw-bg-200: 31 43 62;
+		--tw-bg-300: 55 67 87;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--tw-primary-100: 31 58 95;
+			--tw-primary-200: 77 100 141;
+			--tw-primary-300: 172 194 239;
+			--tw-accent-100: 61 90 128;
+			--tw-accent-200: 206 232 255;
+			--tw-text-100: 255 255 255;
+			--tw-text-200: 224 224 224;
+			--tw-bg-100: 15 28 46;
+			--tw-bg-200: 31 43 62;
+			--tw-bg-300: 55 67 87;
+		}
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
 	}
 	code {
 		font-family:
