@@ -17,5 +17,7 @@ const { tag } = Astro.params;
 ---
 
 <Layout title={tag}>
-	<p>Posts tagged with {tag}</p>
+	<div class="p-10">
+		<h1 class="text-mutedTxt">Posts tagged with: {tag.toUpperCase()}</h1>
+	</div>
 </Layout>

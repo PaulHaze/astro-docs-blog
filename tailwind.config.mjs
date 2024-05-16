@@ -47,8 +47,8 @@ export default {
 					200: 'rgb(var(--tw-bg-200) / <alpha-value>)',
 					300: 'rgb(var(--tw-bg-300) / <alpha-value>)',
 				},
-				textMain: 'rgb(var(--tw-text-100) / <alpha-value>)',
-				textMuted: 'rgb(var(--tw-text-200) / <alpha-value>)',
+				mainTxt: 'rgb(var(--tw-text-100) / <alpha-value>)',
+				mutedTxt: 'rgb(var(--tw-text-200) / <alpha-value>)',
 				primary: {
 					100: 'rgb(var(--tw-primary-100) / <alpha-value>)',
 					200: 'rgb(var(--tw-primary-200) / <alpha-value>)',
