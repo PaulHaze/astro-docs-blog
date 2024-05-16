@@ -1,6 +1,6 @@
 ---
-import { ObserverBox } from '@/components/react/ObserverBox';
-import { ObserverBoxPkg } from '@/components/react/ObserverBoxPkg';
+// import { ObserverBox } from '@/components/react/ObserverBox';
+// import { ObserverBoxPkg } from '@/components/react/ObserverBoxPkg';
 import Layout from '@/layouts/Layout.astro';
 
 const pageTitle = 'Blog Home';
@@ -8,13 +8,7 @@ const pageTitle = 'Blog Home';
 
 <Layout title={pageTitle}>
 	<main class="flex w-full flex-col items-center pt-10 text-center">
-		<h3 class="text-textMuted">Astro main blog tutorial</h3>
-		<div class="h-[1200px]"></div>
-		<div class="space-y-lg">
-			<ObserverBox client:load />
-			<ObserverBoxPkg client:load />
-		</div>
-		<div class="h-[500px]"></div>
+		<h3 class="text-mainTxt">Astro main blog tutorial</h3>
 	</main>
 </Layout>
 
