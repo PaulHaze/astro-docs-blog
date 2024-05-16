@@ -1,5 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import TagSelector from '@/components/TagSelector.astro';
+
 const allPosts = await Astro.glob('../posts/*.md');
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 const pageTitle = 'Tag Selector';
@@ -9,15 +11,7 @@ const pageTitle = 'Tag Selector';
 	<main class="flex w-full flex-col items-center pt-10 text-center">
 		<h3 class="text-mainTxt">Tag Selection Page</h3>
 		<div class="mt-5 space-y-5">
-			{
-				tags.map((tag) => (
-					<p>
-						<a class="text-mainTxt" href={`/tags/${tag}`}>
-							{tag}
-						</a>
-					</p>
-				))
-			}
+			{tags.map((tag) => <TagSelector tag={tag} />)}
 		</div>
 	</main>
 </Layout>
