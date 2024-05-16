@@ -1,5 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import TagSelector from '@/components/TagSelector.astro';
 
 const { frontmatter } = Astro.props;
 ---
@@ -12,5 +13,10 @@ const { frontmatter } = Astro.props;
 		<p>Written by: {frontmatter.author}</p>
 		<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
 		<slot />
+		<hr class="mx-auto w-[50%]" />
+		<h2>Tags:</h2>
+		<div class="mt-5 flex flex-wrap justify-center px-10">
+			{frontmatter.tags.map((tag) => <TagSelector tag={tag} />)}
+		</div>
 	</main>
 </Layout>
