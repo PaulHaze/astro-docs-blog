@@ -17,6 +17,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.8.3(@types/node@20.11.30)(sass@1.77.1)(typescript@5.4.5))(tailwindcss@3.4.3)
+      '@astrojs/ts-plugin':
+        specifier: ^1.8.0
+        version: 1.8.0
       '@iconify-json/openmoji':
         specifier: ^1.1.51
         version: 1.1.51
@@ -166,6 +169,9 @@ packages:
   '@astrojs/telemetry@3.1.0':
     resolution: {integrity: sha512-/ca/+D8MIKEC8/A9cSaPUqQNZm+Es/ZinRv0ZAzvu2ios7POQSsVD+VOj7/hypWNsNM3T7RpfgNq7H2TU1KEHA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+
+  '@astrojs/ts-plugin@1.8.0':
+    resolution: {integrity: sha512-SXbMemCjA66eHXLon2uDGkLAdbIRS+EzSBKPqBuOcQ4XzU/o+oTTp12cXBIQTOtP/zsnuJPYA6gc36Ylic196g==}
 
   '@babel/code-frame@7.24.2':
     resolution: {integrity: sha512-y5+tLQyV8pg3fsiln67BVLD1P13Eg4lh5RW9mF0zUuvLrv9uIQ4MCL+CRT+FTsBlBjcIan6PGsLcBN0m3ClUyQ==}
@@ -1017,6 +1023,9 @@ packages:
   '@volar/language-core@2.2.2':
     resolution: {integrity: sha512-GuvEL4JdxbnLVhPLICncCGT+tVW4cIz9GxXNeDofNnJ4iNTKhr5suGVsA1GLOne9PbraSjn8PlLt+pvLxuRVeQ==}
 
+  '@volar/language-core@2.2.4':
+    resolution: {integrity: sha512-7As47GndxGxsqqYnbreLrfB5NDUeQioPM2LJKUuB4/34c0NpEJ2byVl3c9KYdjIdiEstWZ9JLtLKNTaPWb5jtA==}
+
   '@volar/language-server@2.2.2':
     resolution: {integrity: sha512-9KwlCDNeFCoxTIhYOJNtpQA7M0JP0DHvvwXrqN8qNNEMJT1Oe0cic0C2tUCa/poCgkiXDbUxRldwamyuTZ6ZQg==}
 
@@ -1029,8 +1038,14 @@ packages:
   '@volar/source-map@2.2.2':
     resolution: {integrity: sha512-vUwvZuSW6iN4JI9QRinh9EjFasx1TUtnaWMKwgWx08xz1PyYuNkLlWlrZXBZ5GGBhML0u230M/7X+AHY2h9yKg==}
 
+  '@volar/source-map@2.2.4':
+    resolution: {integrity: sha512-m92FLpR9vB1YEZfiZ+bfgpLrToL/DNkOrorWVep3pffHrwwI4Tx2oIQN+sqHJfKkiT5N3J1owC+8crhAEinfjg==}
+
   '@volar/typescript@2.2.2':
     resolution: {integrity: sha512-WcwOREz7+uOrpjUrKhOMaOKKmyPdtqF95HWX7SE0d9hhBB1KkfahxhaAex5U9Bn43LfINHlycLoYCNEtfeKm0g==}
+
+  '@volar/typescript@2.2.4':
+    resolution: {integrity: sha512-uAQC53tgEbHO62G8NXMfmBrJAlP2QJ9WxVEEQqqK3I6VSy8frL5LbH3hAWODxiwMWixv74wJLWlKbWXOgdIoRQ==}
 
   '@vscode/emmet-helper@2.9.2':
     resolution: {integrity: sha512-MaGuyW+fa13q3aYsluKqclmh62Hgp0BpKIqS66fCxfOaBcVQ1OnMQxRRgQUYnCkxFISAQlkJ0qWWPyXjro1Qrg==}
@@ -3557,6 +3572,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@astrojs/ts-plugin@1.8.0':
+    dependencies:
+      '@astrojs/compiler': 2.8.0
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@volar/language-core': 2.2.4
+      '@volar/typescript': 2.2.4
+      semver: 7.6.2
+      vscode-languageserver-textdocument: 1.0.11
+
   '@babel/code-frame@7.24.2':
     dependencies:
       '@babel/highlight': 7.24.2
@@ -4342,6 +4366,10 @@ snapshots:
     dependencies:
       '@volar/source-map': 2.2.2
 
+  '@volar/language-core@2.2.4':
+    dependencies:
+      '@volar/source-map': 2.2.4
+
   '@volar/language-server@2.2.2':
     dependencies:
       '@volar/language-core': 2.2.2
@@ -4372,9 +4400,18 @@ snapshots:
     dependencies:
       muggle-string: 0.4.1
 
+  '@volar/source-map@2.2.4':
+    dependencies:
+      muggle-string: 0.4.1
+
   '@volar/typescript@2.2.2':
     dependencies:
       '@volar/language-core': 2.2.2
+      path-browserify: 1.0.1
+
+  '@volar/typescript@2.2.4':
+    dependencies:
+      '@volar/language-core': 2.2.4
       path-browserify: 1.0.1
 
   '@vscode/emmet-helper@2.9.2':
