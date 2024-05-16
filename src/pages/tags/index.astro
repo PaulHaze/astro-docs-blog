@@ -10,6 +10,7 @@ const pageTitle = 'Tag Selector';
 <Layout title={pageTitle}>
 	<main class="flex w-full flex-col items-center pt-10 text-center">
 		<h3 class="text-mainTxt">Tag Selection Page</h3>
+		<hr class="w-1/2" />
 		<div class="mt-5 space-y-5">
 			{tags.map((tag) => <TagSelector tag={tag} />)}
 		</div>
