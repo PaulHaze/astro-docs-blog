@@ -1,5 +1,6 @@
 ---
 import Header from '@/components/Header.astro';
+import { Greeting } from '@/components/react/Greeting';
 import Footer from '@/components/Footer.astro';
 
 interface Props {
@@ -27,6 +28,12 @@ import '@/styles/custom.css';
 	>
 		<div>
 			<Header />
+			<div class="flex-center">
+				<Greeting
+					messages={['hello', 'gday', 'whatssupppp', 'yo!']}
+					client:load
+				/>
+			</div>
 			<slot />
 		</div>
 		<Footer />

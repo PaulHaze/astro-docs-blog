@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
-
 import type { SVGProps } from 'react';
 
 export function NavLogo(props: SVGProps<SVGSVGElement>) {

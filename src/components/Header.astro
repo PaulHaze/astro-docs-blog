@@ -1,10 +1,7 @@
 ---
-// import NavBar from './NavBar.astro';
-import { NavBar } from '@/components/react';
-// import NavBarTheirs from './NavBarTheirs.astro';
+import { NavBar } from '@/components/react/NavBar';
 ---
 
 <header>
-	<NavBar client:media="(max-width: 640px)" />
-	<!-- <NavBarTheirs /> -->
+	<NavBar client:load />
 </header>

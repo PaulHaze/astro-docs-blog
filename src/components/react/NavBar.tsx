@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
-
 import { useState } from 'react';
 import { useCollapse } from 'react-collapsed';
 

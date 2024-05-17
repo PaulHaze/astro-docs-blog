@@ -43,6 +43,7 @@ export default {
 		extend: {
 			colors: {
 				mainBg: {
+					DEFAULT: 'rgb(var(--tw-bg-100) / <alpha-value>)',
 					100: 'rgb(var(--tw-bg-100) / <alpha-value>)',
 					200: 'rgb(var(--tw-bg-200) / <alpha-value>)',
 					300: 'rgb(var(--tw-bg-300) / <alpha-value>)',
