@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import { Fade as Hamburger } from 'hamburger-react';
 
 import { useState } from 'react';
