@@ -40,20 +40,20 @@
 	--bg-300: #374357;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--primary-100: #1f3a5f;
-		--primary-200: #4d648d;
-		--primary-300: #acc2ef;
-		--accent-100: #3d5a80;
-		--accent-200: #cee8ff;
-		--text-100: #ffffff;
-		--text-200: #e0e0e0;
-		--bg-100: #0f1c2e;
-		--bg-200: #1f2b3e;
-		--bg-300: #374357;
-	}
-}
+// @media (prefers-color-scheme: dark) {
+// 	:root {
+// 		--primary-100: #1f3a5f;
+// 		--primary-200: #4d648d;
+// 		--primary-300: #acc2ef;
+// 		--accent-100: #3d5a80;
+// 		--accent-200: #cee8ff;
+// 		--text-100: #ffffff;
+// 		--text-200: #e0e0e0;
+// 		--bg-100: #0f1c2e;
+// 		--bg-200: #1f2b3e;
+// 		--bg-300: #374357;
+// 	}
+// }
 
 @layer base {
 	:root {
@@ -68,6 +68,18 @@
 		--tw-bg-200: 245 244 241;
 		--tw-bg-300: 204 203 200;
 	}
+	.dark {
+		--tw-primary-100: 31 58 95;
+		--tw-primary-200: 77 100 141;
+		--tw-primary-300: 172 194 239;
+		--tw-accent-100: 61 90 128;
+		--tw-accent-200: 206 232 255;
+		--tw-text-100: 255 255 255;
+		--tw-text-200: 224 224 224;
+		--tw-bg-100: 15 28 46;
+		--tw-bg-200: 31 43 62;
+		--tw-bg-300: 55 67 87;
+	}
 	[data-theme='dark'] {
 		--tw-primary-100: 31 58 95;
 		--tw-primary-200: 77 100 141;
@@ -80,20 +92,20 @@
 		--tw-bg-200: 31 43 62;
 		--tw-bg-300: 55 67 87;
 	}
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--tw-primary-100: 31 58 95;
-			--tw-primary-200: 77 100 141;
-			--tw-primary-300: 172 194 239;
-			--tw-accent-100: 61 90 128;
-			--tw-accent-200: 206 232 255;
-			--tw-text-100: 255 255 255;
-			--tw-text-200: 224 224 224;
-			--tw-bg-100: 15 28 46;
-			--tw-bg-200: 31 43 62;
-			--tw-bg-300: 55 67 87;
-		}
-	}
+	// @media (prefers-color-scheme: dark) {
+	// 	:root {
+	// 		--tw-primary-100: 31 58 95;
+	// 		--tw-primary-200: 77 100 141;
+	// 		--tw-primary-300: 172 194 239;
+	// 		--tw-accent-100: 61 90 128;
+	// 		--tw-accent-200: 206 232 255;
+	// 		--tw-text-100: 255 255 255;
+	// 		--tw-text-200: 224 224 224;
+	// 		--tw-bg-100: 15 28 46;
+	// 		--tw-bg-200: 31 43 62;
+	// 		--tw-bg-300: 55 67 87;
+	// 	}
+	// }
 	html {
 		font-family: system-ui, sans-serif;
 		@apply text-mainTxt;

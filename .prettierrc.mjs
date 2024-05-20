@@ -7,7 +7,7 @@ export default {
 	trailingComma: 'es5',
 	useTabs: true,
 	// pluginSearchDirs: [__dirname],
-	plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+	plugins: ['prettier-plugin-tailwindcss', 'prettier-plugin-astro'],
 	overrides: [
 		{
 			files: '*.astro',

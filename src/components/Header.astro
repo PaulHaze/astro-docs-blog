@@ -1,7 +1,13 @@
 ---
 import { NavBar } from '@/components/react/NavBar';
+import ThemeToggler from '@/components/ThemeToggler.astro';
 ---
 
-<header>
-	<NavBar client:load />
+<header class="relative flex">
+	<div class="w-full">
+		<NavBar client:load />
+	</div>
+	<div class="absolute right-3 top-4">
+		<ThemeToggler />
+	</div>
 </header>
