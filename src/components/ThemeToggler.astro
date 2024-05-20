@@ -1,6 +1,7 @@
 ---
 
 ---
+
 <button id="themeToggle">
 	<svg width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 		<path
@@ -58,11 +59,11 @@
 
 	const handleToggleClick = () => {
 		const element = document.documentElement;
-		const hasDark = element.hasAttribute('data-theme', 'dark');
-		element.setAttribute('data-theme', `${hasDark ? 'light' : 'dark'}`);
-
-		element.classList.toggle('dark');
 		const isDark = element.classList.contains('dark');
+
+		element.setAttribute('data-theme', `${isDark ? 'light' : 'dark'}`);
+		element.classList.toggle('dark');
+
 		localStorage.setItem('theme', isDark ? 'dark' : 'light');
 	};
 
