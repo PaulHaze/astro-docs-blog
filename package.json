@@ -1,64 +1,47 @@
 {
-	"name": "astro-docs-blog",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro check && astro build",
-		"check": "astro check",
-		"watch": "astro check --watch",
-		"preview": "astro preview",
-		"astro": "astro",
-		"lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
-	},
-	"dependencies": {
-		"@astrojs/check": "^0.6.0",
-		"@astrojs/preact": "^3.3.0",
-		"@astrojs/react": "^3.3.4",
-		"@astrojs/tailwind": "^5.1.0",
-		"@astrojs/ts-plugin": "^1.8.0",
-		"@iconify-json/openmoji": "^1.1.51",
-		"@types/react": "^18.3.1",
-		"@types/react-dom": "^18.3.0",
-		"astro": "^4.8.3",
-		"astro-icon": "^1.1.0",
-		"hamburger-react": "^2.5.0",
-		"react": "^18.3.1",
-		"react-collapsed": "^4.1.2",
-		"react-dom": "^18.3.1",
-		"react-intersection-observer": "^9.10.2",
-		"sass": "^1.76.0",
-		"sharp": "^0.33.3",
-		"tailwindcss": "^3.4.3",
-		"typescript": "^5.4.5"
-	},
-	"devDependencies": {
-		"@typescript-eslint/parser": "^7.5.0",
-		"eslint": "^8.57.0",
-		"eslint-plugin-astro": "^0.33.1",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-tailwindcss": "^3.15.1",
-		"prettier": "^3.2.5",
-		"prettier-config-standard": "^7.0.0",
-		"prettier-plugin-astro": "^0.13.0",
-		"prettier-plugin-tailwindcss": "^0.5.13"
-	},
-	"prettier": {
-		"astroAllowShorthand": true,
-		"overrides": [
-			{
-				"files": "*.astro",
-				"options": {
-					"parser": "astro"
-				}
-			}
-		],
-		"pluginSearchDirs": [
-			"."
-		],
-		"plugins": [
-			"prettier-plugin-astro"
-		]
-	}
+  "name": "astro-docs-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "check": "astro check",
+    "watch": "astro check --watch",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.6.0",
+    "@astrojs/preact": "^3.3.0",
+    "@astrojs/react": "^3.3.4",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/ts-plugin": "^1.8.0",
+    "@iconify-json/openmoji": "^1.1.51",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.8.3",
+    "astro-icon": "^1.1.0",
+    "hamburger-react": "^2.5.0",
+    "react": "^18.3.1",
+    "react-collapsed": "^4.1.2",
+    "react-dom": "^18.3.1",
+    "react-intersection-observer": "^9.10.2",
+    "sass": "^1.76.0",
+    "sharp": "^0.33.3",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^7.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^0.33.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-tailwindcss": "^3.15.1",
+    "prettier": "^3.2.5",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-tailwindcss": "^0.5.13"
+  }
 }

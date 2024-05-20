@@ -1,19 +1,19 @@
 ---
-import { Icon } from 'astro-icon/components';
-import NavLinks from './NavLinks.astro';
-import HamburgerLinks from './hamburger/HamburgerLinks.astro';
-import { HamburgerMine } from './hamburger/HamburgerMine';
+import { Icon } from "astro-icon/components";
+import NavLinks from "./NavLinks.astro";
+import HamburgerLinks from "./hamburger/HamburgerLinks.astro";
+import { HamburgerMine } from "./hamburger/HamburgerMine";
 ---
 
-<nav class="flex h-[60px] items-center bg-stone-700/30">
-	<div
-		class="mx-auto flex w-full max-w-lg items-center justify-between px-10 md:px-20"
-	>
-		<Icon name="header-logo" size={30} />
-		<div class="sm:hidden">
-			<HamburgerMine client:load />
-		</div>
-		<NavLinks />
-	</div>
-	<HamburgerLinks />
+<nav class="flex h-[60px] items-center bg-white">
+  <div
+    class="mx-auto flex w-full max-w-lg items-center justify-between px-10 md:px-20"
+  >
+    <Icon name="header-logo" size={30} />
+    <div class="sm:hidden">
+      <HamburgerMine client:load />
+    </div>
+    <NavLinks />
+  </div>
+  <HamburgerLinks />
 </nav>

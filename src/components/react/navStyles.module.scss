@@ -1,10 +1,10 @@
 .hamburgerLinks {
 	ul {
-		@apply flex w-full flex-col items-center justify-center bg-stone-700/30 pb-2 text-sm text-stone-400;
+		@apply flex w-full flex-col items-center justify-center bg-mainBg-200 pb-2 text-sm text-mutedTxt/80;
 		li {
-			@apply w-[50%] text-center hover:text-stone-200;
+			@apply w-[50%] text-center hover:text-mainTxt;
 			&:not(:last-child) {
-				@apply border-b border-stone-400/50;
+				@apply border-b border-mutedTxt/20;
 			}
 			a {
 				@apply py-4 flex-center;

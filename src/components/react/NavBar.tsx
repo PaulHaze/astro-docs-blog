@@ -10,8 +10,8 @@ export function NavBar() {
 	const { getCollapseProps } = useCollapse({ isExpanded });
 
 	return (
-		<div className="">
-			<nav className="flex h-[60px] items-center bg-stone-700/30">
+		<>
+			<nav className="flex h-[60px] items-center bg-mainBg-200">
 				<div className="mx-auto flex w-full max-w-lg items-center justify-between px-10 md:px-20">
 					<div className="h-10 w-10 flex-center">
 						<NavLogo />
@@ -35,6 +35,6 @@ export function NavBar() {
 			<div {...getCollapseProps()}>
 				<HamburgerLinks />
 			</div>
-		</div>
+		</>
 	);
 }
