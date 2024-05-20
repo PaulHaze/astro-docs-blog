@@ -14,7 +14,7 @@ export function Greeting({ messages }: Props) {
 		<div className="w-full flex-col flex-center">
 			<h3>{greeting}! Thank you for visiting!</h3>
 			<button
-				className="text-mainBg mt-5 rounded bg-white px-4 py-2"
+				className="text-mainBg mt-5 rounded bg-accent-200 px-4 py-2"
 				onClick={() => setGreeting(randomMessage())}
 			>
 				New Greeting
