@@ -43,5 +43,24 @@
     "prettier-config-standard": "^7.0.0",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.13"
+  },
+  "prettier": {
+    "astroAllowShorthand": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "overrides": [
+      {
+        "files": "*.astro",
+        "options": {
+          "parser": "astro"
+        }
+      }
+    ],
+    "pluginSearchDirs": [
+      "."
+    ],
+    "plugins": [
+      "prettier-plugin-astro"
+    ]
   }
 }
