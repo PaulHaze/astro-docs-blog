@@ -16,14 +16,14 @@ export function NavBar() {
 					<div className="h-10 w-10 flex-center">
 						<NavLogo />
 					</div>
-					<ul className="hidden gap-x-5 text-sm text-stone-400 sm:flex">
-						<li className="hover:text-stone-100">
+					<ul className="hidden gap-x-5 text-sm text-mutedTxt sm:flex">
+						<li className="hover:text-mainTxt">
 							<a href="/">HOME</a>
 						</li>
-						<li className="hover:text-stone-100">
+						<li className="hover:text-mainTxt">
 							<a href="/blog/">BLOG</a>
 						</li>
-						<li className="hover:text-stone-100">
+						<li className="hover:text-mainTxt">
 							<a href="/about/">ABOUT</a>
 						</li>
 					</ul>
