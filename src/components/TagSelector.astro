@@ -1,15 +1,18 @@
 ---
 interface Props {
 	tag: string;
+	path: string;
 }
 
-const { tag } = Astro.props;
+const { tag, path } = Astro.props;
+const isSelected = path.includes(tag);
 ---
 
-<div class="m-2 rounded bg-primary-300 px-3 py-2">
+<div class="m-2 rounded px-3 py-2 bg-accent-200">
 	<a class="text-slate-800" href={`/tags/${tag}`}>
 		{tag}
 	</a>
+	<div class="text-mainBg">{isSelected}</div>
 </div>
 
 <script></script>

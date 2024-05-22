@@ -56,6 +56,7 @@ export default {
 					300: 'rgb(var(--tw-primary-300) / <alpha-value>)',
 				},
 				accent: {
+					DEFAULT: 'rgb(var(--tw-accent-100) / <alpha-value>)',
 					100: 'rgb(var(--tw-accent-100) / <alpha-value>)',
 					200: 'rgb(var(--tw-accent-200) / <alpha-value>)',
 				},

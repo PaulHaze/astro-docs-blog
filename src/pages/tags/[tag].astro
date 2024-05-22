@@ -12,11 +12,6 @@ export const getStaticPaths = (async () => {
 		...new Set(allPosts.map((post) => post.data.tags).flat()),
 	];
 
-	// const returnedParams = uniqueTags.map((tag) => ({
-	// 	params: { tag },
-	// 	props: { posts: allPosts },
-	// }));
-	// console.log(returnedParams);
 	return uniqueTags.map((tag) => {
 		const filteredPosts = allPosts.filter((post) =>
 			post.data.tags.includes(tag),
@@ -36,6 +31,8 @@ const { posts, uniqueTags } = Astro.props;
 ---
 
 <Layout title={tag}>
+	<h1>The current URL pathname is: {Astro.url.pathname}</h1>
+	{console.log('selected tag from [tag]: ', tag)}
 	<div
 		class="h-full w-full justify-center space-y-5 p-10 text-center text-cyan-50"
 	>
@@ -50,7 +47,11 @@ const { posts, uniqueTags } = Astro.props;
 		</ul>
 		<hr class="mx-auto w-[50%]" />
 		<div class="mt-5 flex flex-wrap justify-center px-10">
-			{uniqueTags.map((tag) => <TagSelector tag={tag} />)}
+			{
+				uniqueTags.map((tag) => (
+					<TagSelector path={Astro.url.pathname} tag={tag} />
+				))
+			}
 		</div>
 	</div>
 </Layout>
