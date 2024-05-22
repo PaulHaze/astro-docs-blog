@@ -1,18 +1,21 @@
 ---
 interface Props {
 	tag: string;
-	path: string;
+	isSelected?: boolean;
 }
 
-const { tag, path } = Astro.props;
-const isSelected = path.includes(tag);
+const { tag, isSelected } = Astro.props;
 ---
 
-<div class="m-2 rounded px-3 py-2 bg-accent-200">
-	<a class="text-slate-800" href={`/tags/${tag}`}>
+<div
+	class={`"m-2 rounded px-3 py-2 m-1 ${isSelected ? 'bg-slate-700 text-white/90' : 'bg-slate-100 text-black'}"`}
+>
+	<a
+		class={` ${isSelected ? ' text-white/90' : ' text-black'}`}
+		href={`/tags/${tag}`}
+	>
 		{tag}
 	</a>
-	<div class="text-mainBg">{isSelected}</div>
 </div>
 
 <script></script>

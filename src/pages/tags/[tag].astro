@@ -28,11 +28,11 @@ type Params = InferGetStaticParamsType<typeof getStaticPaths>;
 
 const { tag } = Astro.params as Params;
 const { posts, uniqueTags } = Astro.props;
+const urlTags = Astro.url.pathname.split('/');
+const selectedTag = urlTags[urlTags.length - 1];
 ---
 
 <Layout title={tag}>
-	<h1>The current URL pathname is: {Astro.url.pathname}</h1>
-	{console.log('selected tag from [tag]: ', tag)}
 	<div
 		class="h-full w-full justify-center space-y-5 p-10 text-center text-cyan-50"
 	>
@@ -48,9 +48,9 @@ const { posts, uniqueTags } = Astro.props;
 		<hr class="mx-auto w-[50%]" />
 		<div class="mt-5 flex flex-wrap justify-center px-10">
 			{
-				uniqueTags.map((tag) => (
-					<TagSelector path={Astro.url.pathname} tag={tag} />
-				))
+				uniqueTags.map((tag) => {
+					return <TagSelector isSelected={tag === selectedTag} tag={tag} />;
+				})
 			}
 		</div>
 	</div>
