@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: My Second Blog Post
 author: DJ Hazy
 description: "After learning some Astro, I couldn't stop!"

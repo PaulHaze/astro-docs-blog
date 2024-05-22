@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: My Fourth  Blog Post
 author: DJ Hazy
 description: "This post will automatically show up!"
